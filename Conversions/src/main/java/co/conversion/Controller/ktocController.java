@@ -26,6 +26,19 @@ public class ktocController {
         return ktocService.togetCelsius(kelvin);
 
     }
+    
+    @GetMapping(path = "/kilometerConvert/{miles}")
+    public Double toConvertKilometeres(@PathVariable String miles) {
+        return ktocService.toGetInkmeters(miles);
+
+    }
+    
+
+    @GetMapping(path = "/milesConvert/{kilometeres}")
+    public Double toConvertMiles(@PathVariable String kilometeres) {
+        return ktocService.toGetInMiles(kilometeres);
+
+    }
 
     
 }
